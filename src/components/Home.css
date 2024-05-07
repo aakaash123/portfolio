@@ -1,0 +1,82 @@
+/* Home.css */
+
+.home-section {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heading {
+    font-size: 2.5em;
+}
+
+.main-name {
+    color: #6c63ff;
+}
+
+.wave {
+    animation: wave-animation 1.5s infinite linear;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(12deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(9deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.home-about-social {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.home-about-social h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.home-about-social p {
+    font-size: 1.5em;
+}
+
+.home-about-social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.home-about-social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.home-about-social-links a {
+    color: #6c63ff;
+    font-size: 2em;
+}
+
+.home-about-social-links a:hover {
+    color: #000;
+}
