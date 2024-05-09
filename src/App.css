@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  background: url('images/bg.jpg') center center no-repeat; /* Background image path */
+  background-size: cover; /* Cover the entire container */
 }
+
+
 
 .App-logo {
   height: 40vmin;

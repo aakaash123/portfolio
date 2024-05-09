@@ -1,4 +1,6 @@
 .row {
+height: 10vh; /* 80% of the viewport height */
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,10 +8,8 @@
 }
 
 .footer {
-    background-color: #333;
+    /* 100% of the viewport width */
     color: white;
-    padding: 20px 0;
-    height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;

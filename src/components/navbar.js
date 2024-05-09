@@ -1,3 +1,4 @@
+// NavBar.js
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -7,23 +8,19 @@ import { AiOutlineHome, AiOutlineUser, AiOutlineFundProjectionScreen } from "rea
 import { CgFileDocument } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import { CgGitFork } from "react-icons/cg";
-import "./navbar.css";
+import "./navbar.css"; // Import your CSS file
 
 function NavBar() {
     return (
         <Navbar expand="md" fixed="top" className="navbar">
             <Container>
-                <Navbar.Brand as={Link} to="/">
-                    <span className="brand">My Brand</span>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/">
                             <AiOutlineHome /> Home
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/about">
-                            <AiOutlineUser /> About
+                        <Nav.Link as={Link} to="/experience">
+                            <AiOutlineUser /> Experience
                         </Nav.Link>
                         <Nav.Link as={Link} to="/project">
                             <AiOutlineFundProjectionScreen /> Projects
