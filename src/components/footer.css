@@ -33,9 +33,45 @@ height: 10vh; /* 80% of the viewport height */
 }
 
 .footer-icons li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .social-icons a {
-    font-size: 24px;
+  font-size: 24px;
+  color: white;
+  position: relative; /* Needed for some of the animation effects */
+}
+
+.social-icons a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Adjust to match background color */
+  border-radius: 50%; /* Creates a circular mask */
+  transform: scale(0); /* Initially hidden */
+  transition: transform 0.3s ease-in-out; /* Animation for reveal */
+}
+
+.social-icons a:hover:after {
+  transform: scale(1.2); /* Reveal animation on hover */
+  transition-delay: 0.2s; /* Delay reveal animation slightly */
+}
+
+.social-icons a svg {
+  /* Move the icon slightly up due to absolute positioning */
+  transform: translateY(-3px);
+  animation: social-icon-spin 5s infinite linear; /* Spin animation */
+}
+
+@keyframes social-icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

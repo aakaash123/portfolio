@@ -25,14 +25,14 @@ function NavBar() {
                         <Nav.Link as={Link} to="/project">
                             <AiOutlineFundProjectionScreen /> Projects
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/resume">
-                            <CgFileDocument /> Resume
+                        <Nav.Link as={Link} to="/contact">
+                            <CgFileDocument /> Contact
                         </Nav.Link>
-                        <Nav.Link href="https://example.com">
-                            <ImBlog /> Blogs
+                        <Nav.Link href="/skills">
+                            <ImBlog /> Skills
                         </Nav.Link>
-                        <Nav.Link href="https://github.com">
-                            <CgGitFork /> GitHub
+                        <Nav.Link href="https://rb.gy/fouai6">
+                            <CgGitFork /> Resume
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

@@ -50,3 +50,75 @@
         margin-bottom: 10px; /* Add bottom margin between links */
     }
 }
+
+/* navbar.css */
+
+.navbar {
+height: 10vh;
+    width: 100vw;
+  color: #fff; /* Light text color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+.navbar .navbar-nav {
+  display: flex; /* Ensure horizontal alignment */
+  justify-content: center; /* Align links to the right */
+}
+
+.navbar .nav-link {
+  margin: 0 1rem; /* Spacing between links */
+  font-size: 1.1rem; /* Adjust font size as desired */
+  text-decoration: none; /* Remove underline */
+  position: relative; /* Enable hover effects */
+  display: inline-block; /* Allow multi-line content for icons and text */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.navbar .nav-link:hover {
+  color: #00e0ff; /* Vibrant hover color */
+  /* Add your preferred hover effect here */
+  /* Option 1: Underline animation */
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00e0ff;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(5px); /* Initial position below the link */
+  }
+
+  .navbar .nav-link:hover::after {
+    transform: translateY(0); /* Animate on hover */
+  }
+
+  /* Option 2: Background pulse animation */
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .nav-link:hover::after {
+    opacity: 0.3; /* Show pulse on hover */
+    transform: scale(1.1); /* Slight expansion animation */
+  }
+
+  /* Option 3: Text shadow animation (choose one or create your own) */
+  /*
+  text-shadow: 0 0 3px #00e0ff, 0 0 5px #00e0ff;
+  */
+}
+
+.navbar .nav-link svg {
+  margin-right: 0.5rem; /* Adjust spacing between icon and text */
+  vertical-align: middle; /* Align icon vertically with text */
+}

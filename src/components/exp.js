@@ -10,7 +10,12 @@ const Experience = () => {
         <h2>SDE 1</h2>
         <p>Pype, Delhi, India</p>
         <p>July 2023 - Present</p>
-        <p>NodeJs, NextJs, Generative AI, LLMs, Python</p>
+        <div className="Tech-Stack">
+            <div className="Tech">Node.js</div>
+            <div className="Tech">Next.js</div>
+            <div className="Tech">Gen AI</div>
+            <div className="Tech">Python</div>
+        </div>
         <ul>
           <li style={{padding:"5px"}}>Leading development of an advanced Enterprise Search Tool for seamless data retrieval</li>
           <li style={{padding:"5px"}}>Implementing robust security measures, including role-based access controls, for data integrity</li>
@@ -21,7 +26,12 @@ const Experience = () => {
         <h2>SDE Intern</h2>
         <p>Amazon, Bangalore, India</p>
         <p>Jan 2023 - June 2023</p>
-        <p>Java, AWS, ReactJs, Git, SQL, Junit</p>
+        <div className="Tech-Stack">
+                    <div className="Tech">Java</div>
+                    <div className="Tech">ReactJs</div>
+                    <div className="Tech">AWS</div>
+                    <div className="Tech">SQL</div>
+                </div>
         <ul>
         <li style={{padding:"5px"}}>Developed a cutting-edge testing tool from scratch, slashing testing time from days to mere hours</li>
           <li style={{padding:"5px"}}>Created a Java-based differ library, doubling accuracy in comparing and diffing documents in ion format</li>
@@ -32,7 +42,12 @@ const Experience = () => {
         <h2>ML Intern</h2>
         <p>Feynn Labs, Jabalpur, India</p>
         <p>Oct 2021 - Dec 2021</p>
-        <p>Python, Opencv, pandas, Django, Git, GitHub, Linux</p>
+        <div className="Tech-Stack">
+                            <div className="Tech">Python</div>
+                            <div className="Tech">Django</div>
+                            <div className="Tech">Opencv</div>
+                            <div className="Tech">Linux</div>
+                        </div>
         <ul>
         <li style={{padding:"5px"}}>Created AI-enabled FinTech B2B Invoice, trained ML model for payment prediction</li>
         <li style={{padding:"5px"}}>Created AI-enabled FinTech B2B Invoice, trained ML model for payment prediction</li>

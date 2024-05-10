@@ -54,8 +54,7 @@ function Home() {
                 }}
             />
             <Container className="home-content">
-                <div className="name-section">
-
+                <div style={{padding:"10%"}}>
                     <h1 className="heading-name">
                                             <strong className="main-name">Akash Gupta</strong>
                                         </h1>

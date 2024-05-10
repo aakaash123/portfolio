@@ -9,6 +9,19 @@
   height: 80vh; /* 80% of screen height */
 }
 
+.Tech-Stack {
+    display: flex;
+              justify-content: space-around;
+              align-items: center;
+              text-align: center;
+}
+
+.Tech {
+        background: yellow;
+        padding: 15px;
+        border-radius:30%;
+}
+
 .experience-box {
   width: 25%; /* Each box takes up 30% of the width */
   height: 50%;
