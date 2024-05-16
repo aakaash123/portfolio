@@ -43,7 +43,6 @@ const Contact = () => {
                 <h1>Nice to Meet You!</h1>
                 <h4>Have a question or just want to get in touch? Let's chat.</h4>
             </div>
-            <p id="failure">{failureMessage}</p>
             <p id="success">{successMessage}</p>
 
             <form onSubmit={handleSubmit}>
