@@ -10,7 +10,6 @@ const Contact = () => {
         message: ''
     });
     const [successMessage, setSuccessMessage] = useState('');
-    const [failureMessage, setFailureMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });

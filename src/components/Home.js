@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Particles from 'react-tsparticles';
 import Typewriter from 'typewriter-effect';
 import './Home.css';
 
