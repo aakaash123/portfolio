@@ -101,3 +101,40 @@
 .intro-text a:hover {
     color: #6c63ff;
 }
+
+
+/* Basic styles */
+.home-title *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-title :root{
+    --bg-color: #D8D8D8;
+}
+
+.home-title body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: #000;
+  background-color: var(--bg-color);
+  font-family: 'Maitree', serif;
+}
+
+. home-title h1{
+    font-size: 3em;
+    font-weight: normal;
+}
+
+/* title styles */
+.home-title span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.6;
+}

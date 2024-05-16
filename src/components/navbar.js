@@ -28,7 +28,7 @@ function NavBar() {
                         <Nav.Link as={Link} to="/contact">
                             <CgFileDocument /> Contact
                         </Nav.Link>
-                        <Nav.Link href="/skills">
+                        <Nav.Link as={Link} to="/skills">
                             <ImBlog /> Skills
                         </Nav.Link>
                         <Nav.Link href="https://rb.gy/fouai6">

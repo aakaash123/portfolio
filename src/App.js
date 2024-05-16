@@ -8,11 +8,13 @@ import Project from "./components/Project";
 import Contact from "./components/contact";
 import Skills from "./components/skills";
 import './App.css';
+import Stars from './components/Stars';
 
 function App() {
     return (
         <div className="App">
             <Router>
+                <Stars />
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<Home/>}/>

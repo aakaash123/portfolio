@@ -1,97 +1,177 @@
-.skills-container {
-  height: 80vh;
+/* Put your CSS code here */
+/* COLORS */
+
+.main {
+    height: 80vh;
+    width: 98vw;
+}
+:root {
+  --b: #5aa8e8;
+  --b-rgba: rgba(108, 90, 232, 0.25);
+  --b-skills: #5E95E8;
+  --w: #fff;
 }
 
-.skills-heading {
-  font-size: 40px; /* Adjust to fit your content */
-  color: #fff; /* White text */
-  text-align: center; /* Center alignment */
-  position: relative; /* Required for particles */
+/* TRANSITIONS */
+:root {
+  --tr01: all 0.5s ease-in-out;
+  --bezier: cubic-bezier(0.17, 0.67, 0, 1);
 }
 
-.skills-heading::after {
-  content: "";
+/* SKILL BARS */
+:root {
+  --skills01: 90%;
+  --skills02: 90%;
+  --skills03: 80%;
+  --skills04: 70%;
+  --skills05: 75%;
+  --skills06: 60%;
+  --skills07: 80%;
+  --skills08: 75%;
+}
+
+.skills {
+  animation-name: skills;
+}
+
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+
+html,
+body,
+main {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+}
+
+section article.skills {
+  width: 500px;
+  height: auto;
+}
+
+section article.skills p {
+  z-index: 2;
+  color: var(--w);
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+section article.skills div span:nth-child(1) {
+  z-index: -2;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--w);
+  height: 85%;
   width: 100%;
-  height: 100%;
-  background: transparent;
 }
 
-.particle {
-  position: absolute;
-  width: 5px; /* Adjust particle size */
-  height: 5px; /* Adjust particle size */
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2); /* White particles with low opacity */
-  animation: particle-move 2s infinite ease-in-out;
-}
-
-@keyframes particle-move {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Add multiple particles with different animation delays for a dynamic effect */
-.skills-heading::after {
-  content: "";
+section article.skills div span:nth-child(2) {
+  z-index: -1;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
+  background: var(--b-skills);
   height: 100%;
-  background: transparent;
 }
 
-.particle:nth-child(1) {
+section article.skills div:nth-child(1) span:nth-child(2) {
+  width: var(--skills01);
   animation-delay: 0s;
 }
 
-.particle:nth-child(2) {
+section article.skills div:nth-child(2) span:nth-child(2) {
+  width: var(--skills02);
+  animation-delay: 0.05s;
+}
+
+section article.skills div:nth-child(3) span:nth-child(2) {
+  width: var(--skills03);
+  animation-delay: 0.1s;
+}
+
+section article.skills div:nth-child(4) span:nth-child(2) {
+  width: var(--skills04);
+  animation-delay: 0.15s;
+}
+
+section article.skills div:nth-child(5) span:nth-child(2) {
+  width: var(--skills05);
   animation-delay: 0.2s;
 }
 
-/* Add more particle elements as desired */
-
-
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
+section article.skills div:nth-child(6) span:nth-child(2) {
+  width: var(--skills06);
+  animation-delay: 0.25s;
 }
 
-.skill {
-  margin: 2%;
-  margin-right: 3%;
-  margin-left: 3%;
-
-  background: white;
-  display:flex;
-  flex-direction: column;
-   justify-content: center;
-   align-items: center;
-
-  border-radius:10%;
+section article.skills div:nth-child(7) span:nth-child(2) {
+  width: var(--skills07);
+  animation-delay: 0.3s;
 }
 
-.skill img {
-    padding:5px;
-  width: 150px; /* Set according to your icon size */
-  height: 100px; /* Set according to your icon size */
+section article.skills div:nth-child(8) span:nth-child(2) {
+  width: var(--skills08);
+  animation-delay: 0.35s;
 }
 
-.skill p {
-  font-family: 'VT323', monospace;
-  font-size: 16px;
-  color: blue; /* Light blue */
-  text-shadow: 0 0 3px #0ff, 0 0 5px #00f; /* Neon effect */
-  animation: neon-glow 1s infinite alternate ease-in-out;
+section:before {
+  position: absolute;
+  top: -250px;
+  left: -350px;
+  width: 500px;
+  height: 500px;
+  content: '';
+  background: var(--b-rgba);
+  transform: rotate(30deg);
 }
 
-@keyframes neon-glow {
-  from { text-shadow: 0 0 3px #0ff, 0 0 5px #00f; }
-  to { text-shadow: 0 0 1px #0ff, 0 0 2px #00f; }
+section:after {
+  position: absolute;
+  bottom: -250px;
+  right: -350px;
+  width: 500px;
+  height: 500px;
+  content: '';
+  background: var(--b-rgba);
+  transform: rotate(30deg);
 }
 
+.skills {
+  animation: skills 1.25s var(--bezier);
+}
 
+@keyframes skills {
+  0% {
+    left: -500px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
