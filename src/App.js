@@ -9,6 +9,7 @@ import Contact from "./components/contact";
 import Skills from "./components/skills";
 import './App.css';
 import Stars from './components/Stars';
+import Card from './components/Card';
 
 function App() {
     return (
@@ -19,7 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/experience" element={<Exp/>}/> {/* Corrected usage of the Experience component */}
-                    <Route path="/project" element={<Project/>}/>
+                    <Route path="/project" element={<Card />}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/skills" element={<Skills/>}/>
                 </Routes>

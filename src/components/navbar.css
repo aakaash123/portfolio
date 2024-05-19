@@ -8,7 +8,6 @@
 
 
 .ms-auto {
-    padding: 2%;
 }
 
 /* Style for the navbar brand */
@@ -67,8 +66,9 @@ height: 10vh;
 }
 
 .navbar .nav-link {
-  margin: 0 1rem; /* Spacing between links */
-  font-size: 1.1rem; /* Adjust font size as desired */
+  margin-right: 50px; /* Spacing between links */
+  margin-left: 50px;
+  font-size: 1.5rem; /* Adjust font size as desired */
   text-decoration: none; /* Remove underline */
   position: relative; /* Enable hover effects */
   display: inline-block; /* Allow multi-line content for icons and text */
@@ -121,4 +121,63 @@ height: 10vh;
 .navbar .nav-link svg {
   margin-right: 0.5rem; /* Adjust spacing between icon and text */
   vertical-align: middle; /* Align icon vertically with text */
+}
+
+
+
+#nav-icon4 {
+  position: fixed;
+  top: 20px;
+  left:20px;
+  width: 3vw;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
 }

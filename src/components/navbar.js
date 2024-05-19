@@ -1,5 +1,5 @@
 // NavBar.js
-import React from "react";
+import React, { useState } from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -11,9 +11,20 @@ import { CgGitFork } from "react-icons/cg";
 import "./navbar.css"; // Import your CSS file
 
 function NavBar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
     return (
         <Navbar expand="md" fixed="top" className="navbar">
             <Container>
+            <div id="nav-icon4" className={isOpen ? 'open' : ''} onClick={toggleMenu}>
+                                                                  <span></span>
+                                                                  <span></span>
+                                                                  <span></span>
+                                                                </div>
+{isOpen &&
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/">
@@ -35,7 +46,7 @@ function NavBar() {
                             <CgGitFork /> Resume
                         </Nav.Link>
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar.Collapse>}
             </Container>
         </Navbar>
     );

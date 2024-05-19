@@ -1,0 +1,190 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+
+.Project {height:80vh;
+   width:100vw;
+   display: flex; /* Ensure horizontal alignment */
+     justify-content: space-evenly; /* Align links to the right */
+   }
+
+.flip-container {
+
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.card_front,
+.card_back {
+  padding-top: 50px;
+  width: 440px;
+  height: 440px;
+}
+
+.flipper {
+  transition: all 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card_front {
+    background: white;
+}
+
+
+.card_front,
+.card_back {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.card_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 1.3em;
+}
+
+.card_back {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to right, #07d697, #0ccfa3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Sen", sans-serif;
+}
+
+.card_back p {
+  padding: 10px 30px;
+  text-align: center;
+  line-height: 1.68;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card_back button {
+  padding: 20px 50px;
+  border: 0;
+  box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card_back button:hover {
+  transform: scale(1.1);
+}
+
+.card_back button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+}
+
+.card_front_top_background {
+  position: relative;
+  height: 30%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://github.com/octaviandd/invite-Me/raw/master/pjimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.center {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center p {
+  width: 200px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+.pr {
+    height: 300px;
+    width: 440px;
+  font: 1000 0.5em/0.5 "Neuton";
+  background: black;
+  color: rgba(255,255,255,.25);
+  text-align: center;
+  margin-top: -50px;
+}
+
+.project {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  border: 4px double rgba(255,255,255,.25);
+  border-width: 4px 0;
+  padding: 1.5em 0.1em;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 40em;
+  margin-left: -20em;
+}
+
+.project span {
+  font: 700 7em/0.5 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: .25em 0 .325em;
+  display: block;
+  text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+  /* Clip Background Image */
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.center {
+  margin-top: 30px;
+}
+
+.center p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientText 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

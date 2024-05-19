@@ -9,9 +9,9 @@ function Home() {
             <Container className="home-content">
                 <div style={{padding:"10%"}}>
                     <h1 className="heading-name">
-                                            <strong className="main-name">Akash Gupta</strong>
+                                            <strong className="main-name" style={{ fontSize: "90px" }}>Akash Gupta</strong>
                                         </h1>
-                                        <div className="typewriter-container">
+                                        <div className="typewriter-container" style={{ fontSize: "50px", color:"blue" }}>
                                             <Typewriter
                                                 options={{
                                                     strings: [
