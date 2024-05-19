@@ -4,7 +4,6 @@ import Navbar from './components/navbar';
 import Footer from "./components/footer";
 import Home from "./components/Home";
 import Exp from "./components/exp"; // Corrected import statement
-import Project from "./components/Project";
 import Contact from "./components/contact";
 import Skills from "./components/skills";
 import './App.css';
